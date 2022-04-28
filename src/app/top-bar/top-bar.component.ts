@@ -27,5 +27,11 @@ export class TopBarComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setInterval(() => {
+      this.time = this.capitalizeDate(
+        moment(new Date()).format('ddd d MMM h:mm')
+      );
+    }, 10000);
+  }
 }
