@@ -1,4 +1,9 @@
-<div class="container" cdkDrag>
+<div
+  class="container"
+  cdkDrag
+  [style.width.px]="width"
+  [style.height.px]="height"
+>
   <div class="top-bar">
     <div class="close" (click)="closeWindow()">
       <img src="assets/close.png" alt="fechar" />
@@ -10,4 +15,6 @@
       <img src="assets/maximize.png" alt="maximizar" />
     </div>
   </div>
+
+  <ng-content></ng-content>
 </div>

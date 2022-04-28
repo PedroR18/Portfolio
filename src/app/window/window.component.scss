@@ -1,15 +1,14 @@
 @use "../../../library.scss" as *;
 
 .container {
+  @include flex(center, center);
+  flex-direction: column;
   height: 800px;
   width: 1000px;
-  position: absolute;
-  top: 10%;
-  left: 10%;
   border-radius: 20px;
-  background-color: white;
+  //background-color: white;
   /*   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(18, 18, 18, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px); */
 }

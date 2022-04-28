@@ -4,9 +4,16 @@
   (windowEmitter)="setStatus($event)"
 ></app-search>
 <app-dock></app-dock>
-<app-window
-  *ngIf="status === 'window'"
-  (windowEmitter)="setStatus($event)"
-></app-window>
 
-<img src="assets/bg.jpg" alt="background" class="bg" />
+<div class="window-container" *ngIf="status === 'window'">
+  <app-window (windowEmitter)="setStatus($event)" [height]="800" [width]="400">
+    <app-info></app-info>
+  </app-window>
+  <app-window (windowEmitter)="setStatus($event)" [height]="800" [width]="1000">
+    <div class="test-container">
+      <div class="transparent"></div>
+      <div class="normal"></div>
+    </div>
+  </app-window>
+</div>
+<img src="assets/bg2.jpg" alt="background" class="bg" />

@@ -1,5 +1,12 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  Input,
+  ContentChild,
+  ContentChildren,
+} from '@angular/core';
 
 @Component({
   selector: 'app-window',
@@ -9,6 +16,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class WindowComponent implements OnInit {
   @Output() windowEmitter = new EventEmitter<string>();
 
+  @Input() height = 800;
+  @Input() width = 800;
 
   closeWindow() {
     this.windowEmitter.emit('');

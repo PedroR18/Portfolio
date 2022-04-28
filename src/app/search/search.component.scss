@@ -14,7 +14,7 @@
   padding: 10px 30px;
   @include flex(flex-start, center);
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(18, 18, 18, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
@@ -32,7 +32,7 @@
 
   opacity: 0;
   visibility: hidden;
-  animation: reveal 1s forwards 4s;
+  animation: reveal 2s forwards 4s;
 
   .pic {
     height: 80px;
@@ -41,7 +41,6 @@
   }
 
   p {
-    color: black;
     font-size: 2em;
     margin: 0;
   }
@@ -74,7 +73,6 @@
 .query {
   font-size: 2.2em;
   margin: 0;
-  color: black;
 
   overflow: hidden;
   border-right: 0.15em solid black;
