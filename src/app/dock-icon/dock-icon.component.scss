@@ -1,11 +1,7 @@
 @use "../../../library.scss" as *;
 
-.container {
-  cursor: pointer;
-  display: inline-block;
-}
-
 img {
+  cursor: pointer;
   height: 70px;
   transition: 0.15s ease-in;
   &:hover {

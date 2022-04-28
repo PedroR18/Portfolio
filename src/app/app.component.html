@@ -1,5 +1,12 @@
 <app-top-bar></app-top-bar>
-<app-search></app-search>
+<app-search
+  *ngIf="status === 'search'"
+  (windowEmitter)="setStatus($event)"
+></app-search>
 <app-dock></app-dock>
+<app-window
+  *ngIf="status === 'window'"
+  (windowEmitter)="setStatus($event)"
+></app-window>
 
 <img src="assets/bg.jpg" alt="background" class="bg" />

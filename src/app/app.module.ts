@@ -6,6 +6,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { DockComponent } from './dock/dock.component';
 import { DockIconComponent } from './dock-icon/dock-icon.component';
 import { SearchComponent } from './search/search.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { WindowComponent } from './window/window.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +16,9 @@ import { SearchComponent } from './search/search.component';
     DockComponent,
     DockIconComponent,
     SearchComponent,
+    WindowComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, DragDropModule],
   providers: [],
   bootstrap: [AppComponent],
 })

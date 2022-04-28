@@ -7,7 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DockIconComponent implements OnInit {
   @Input() img = '';
-  @Input() name = '';
 
   constructor() {}
 

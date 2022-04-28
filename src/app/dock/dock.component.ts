@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Icon {
-  name: string;
-  img: string;
-}
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-dock',
@@ -11,29 +7,33 @@ interface Icon {
   styleUrls: ['./dock.component.scss'],
 })
 export class DockComponent implements OnInit {
-  icons: Icon[] = [
-    { name: 'Finder', img: 'assets/Finder.png' },
-    { name: 'Launchpad', img: 'assets/Launchpad.png' },
-    { name: 'Browser', img: 'assets/Safari.png' },
-    { name: 'Messages', img: 'assets/Messages.png' },
-    { name: 'Mail', img: 'assets/Mail.png' },
-    { name: 'Maps', img: 'assets/Maps.png' },
-    { name: 'Photos', img: 'assets/Photos.png' },
-    { name: 'Facetime', img: 'assets/FaceTime.png' },
-    { name: 'Calendar', img: 'assets/Calendar.png' },
-    { name: 'Contacts', img: 'assets/Contacts.png' },
-    { name: 'Reminders', img: 'assets/Reminders.png' },
-    { name: 'Notes', img: 'assets/Notes.png' },
-    { name: 'TV', img: 'assets/TV.png' },
-    { name: 'Music', img: 'assets/Music.png' },
-    { name: 'Podcasts', img: 'assets/Podcasts.png' },
-    { name: 'News', img: 'assets/News.png' },
-    { name: 'App Store', img: 'assets/AppStore.png' },
-    { name: 'Settings', img: 'assets/Settings.png' },
-    { name: 'divider', img: '' },
-    { name: 'Folder', img: 'assets/Folder.png' },
-    { name: 'Trash', img: 'assets/Trash.png' },
+  icons = [
+    'assets/Finder.png',
+    'assets/Launchpad.png',
+    'assets/Safari.png',
+    'assets/Messages.png',
+    'assets/Mail.png',
+    'assets/Maps.png',
+    'assets/Photos.png',
+    'assets/FaceTime.png',
+    'assets/Calendar.png',
+    'assets/Contacts.png',
+    'assets/Reminders.png',
+    'assets/Notes.png',
+    'assets/TV.png',
+    'assets/Music.png',
+    'assets/Podcasts.png',
+    'assets/News.png',
+    'assets/AppStore.png',
+    'assets/Settings.png',
+    '',
+    'assets/Folder.png',
+    'assets/Trash.png',
   ];
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.icons, event.previousIndex, event.currentIndex);
+  }
 
   constructor() {}
 

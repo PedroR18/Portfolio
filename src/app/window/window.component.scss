@@ -1,0 +1,85 @@
+@use "../../../library.scss" as *;
+
+.container {
+  height: 800px;
+  width: 1000px;
+  background-color: white;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-radius: 20px;
+}
+
+.top-bar {
+  @include flex(flex-start, center);
+  gap: 10px;
+  width: 95%;
+  height: 30px;
+  border-radius: 20px;
+  margin: 0 auto;
+
+  div {
+    height: 15px;
+    width: 15px;
+    border-radius: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}
+
+.close {
+  @include flex(center, center);
+  background-color: #ff5150;
+
+  &:hover {
+    img {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  img {
+    height: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease-in;
+  }
+}
+
+.minimize {
+  @include flex(center, center);
+  background-color: #ffbc00;
+
+  &:hover {
+    img {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  img {
+    height: 60%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease-in;
+  }
+}
+
+.maximize {
+  @include flex(center, center);
+  background-color: #00cc1c;
+
+  &:hover {
+    img {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  img {
+    height: 60%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease-in;
+  }
+}
