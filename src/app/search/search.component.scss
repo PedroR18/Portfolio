@@ -1,0 +1,136 @@
+@use "../../../library.scss" as *;
+
+.container {
+  @include flex(center, center);
+  flex-direction: column;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.box {
+  width: 700px;
+  border-radius: 10px;
+  padding: 10px 30px;
+  @include flex(flex-start, center);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.results {
+  width: 700px;
+  height: 100px;
+  background-color: white;
+  border-radius: 10px;
+  @include flex(space-start, center);
+  gap: 40px;
+  position: relative;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  animation: reveal 1s forwards 4s;
+
+  .pic {
+    height: 80px;
+    border-radius: 100px;
+    margin-left: 50px;
+  }
+
+  p {
+    color: black;
+    font-size: 2em;
+    margin: 0;
+  }
+
+  p:nth-child(2) {
+    color: grey;
+    font-size: 1em;
+  }
+
+  .text {
+    @include flex(center, flex-start);
+    flex-direction: column;
+  }
+
+  .click {
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    height: 60px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      transform: rotate(-30deg);
+      animation: ClickEffect 1.2s linear infinite;
+    }
+  }
+}
+
+.query {
+  font-size: 2.2em;
+  margin: 0;
+  color: black;
+
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  white-space: nowrap;
+  margin: 0 auto;
+
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.search {
+  height: 20px;
+}
+
+@keyframes reveal {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 24px);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+@keyframes ClickEffect {
+  50% {
+    -webkit-transform: scale(1.5, 1.5) rotate(-30deg);
+    transform: scale(1.5, 1.5) rotate(-30deg);
+    opacity: 0;
+  }
+  99% {
+    -webkit-transform: scale(0.001, 0.001) rotate(-30deg);
+    transform: scale(0.001, 0.001) rotate(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0.001, 0.001) rotate(-30deg);
+    transform: scale(0.001, 0.001) rotate(-30deg);
+    opacity: 1;
+  }
+}

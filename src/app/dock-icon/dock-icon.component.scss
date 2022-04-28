@@ -1,0 +1,22 @@
+@use "../../../library.scss" as *;
+
+.container {
+  cursor: pointer;
+  display: inline-block;
+}
+
+img {
+  height: 70px;
+  transition: 0.15s ease-in;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.divider {
+  height: 60px;
+  width: 1px;
+  background-color: grey;
+  z-index: 100;
+  margin: 0 20px;
+}

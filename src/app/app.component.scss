@@ -1,0 +1,10 @@
+@use "../../library.scss" as *;
+
+.bg {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}

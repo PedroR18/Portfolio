@@ -1,0 +1,91 @@
+@use "../../../library.scss" as *;
+
+.container {
+  @include flex(space-between, center);
+  width: 100vw;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: black;
+}
+
+.left {
+  @include flex(center, center);
+  gap: 20px;
+  margin-left: 20px;
+
+  p {
+    cursor: pointer;
+    transition: 0.15s ease-in;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+}
+
+.logo {
+  height: 24px;
+  cursor: pointer;
+  transition: 0.15s ease-in;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.menu {
+  @include flex(center, center);
+  gap: 20px;
+  p:nth-child(1) {
+    font-weight: bold;
+  }
+}
+
+.right {
+  @include flex(center, center);
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.time {
+  @include flex(center, center);
+  gap: 14px;
+  font-weight: bold;
+}
+
+.icons {
+  @include flex(center, center);
+  gap: 20px;
+
+  img {
+    cursor: pointer;
+    transition: 0.1s ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  img:nth-child(1) {
+    height: 22px;
+  }
+  img:nth-child(2) {
+    height: 22px;
+  }
+  img:nth-child(3) {
+    height: 16px;
+  }
+  img:nth-child(4) {
+    height: 16px;
+  }
+  img:nth-child(5) {
+    height: 18px;
+  }
+}

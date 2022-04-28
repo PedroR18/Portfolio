@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "San Francisco";
+  src: local("SF-Pro-Text-Regular"),
+    url(./assets/fonts/SF-Pro-Text-Regular.otf) format("opentype");
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: white;
+  font-family: "San Francisco", sans-serif;
+}
