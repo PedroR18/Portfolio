@@ -10,8 +10,8 @@
 }
 
 .window-container {
-  @include flex(space-between, center);
-  height: 800px;
+  @include flex(space-around, center);
+  height: 700px;
   width: 1450px;
   margin: auto;
   position: absolute;
@@ -19,27 +19,4 @@
   left: 0;
   bottom: 0;
   right: 0;
-}
-
-.test-container {
-  @include flex(space-between, center);
-  width: 100%;
-  flex-grow: 1;
-}
-
-.transparent {
-  height: 100%;
-  width: 300px;
-  background: rgba(255, 255, 255, 0.25);
-  //box-shadow: 0 8px 32px 0 rgba(18, 18, 18, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-
-  border-bottom-left-radius: 20px;
-}
-
-.normal {
-  height: 100%;
-  flex-grow: 1;
-  background-color: white;
 }

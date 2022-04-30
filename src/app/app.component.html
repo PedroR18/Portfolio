@@ -6,14 +6,8 @@
 <app-dock></app-dock>
 
 <div class="window-container" *ngIf="status === 'window'">
-  <app-window (windowEmitter)="setStatus($event)" [height]="800" [width]="400">
-    <app-info></app-info>
-  </app-window>
-  <app-window (windowEmitter)="setStatus($event)" [height]="800" [width]="1000">
-    <div class="test-container">
-      <div class="transparent"></div>
-      <div class="normal"></div>
-    </div>
-  </app-window>
+  <app-info></app-info>
+
+  <app-skills></app-skills>
 </div>
 <img src="assets/bg2.jpg" alt="background" class="bg" />

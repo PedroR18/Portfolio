@@ -7,8 +7,8 @@ import { DockComponent } from './dock/dock.component';
 import { DockIconComponent } from './dock-icon/dock-icon.component';
 import { SearchComponent } from './search/search.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { WindowComponent } from './window/window.component';
 import { InfoComponent } from './info/info.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { InfoComponent } from './info/info.component';
     DockComponent,
     DockIconComponent,
     SearchComponent,
-    WindowComponent,
     InfoComponent,
+    SkillsComponent,
   ],
   imports: [BrowserModule, DragDropModule],
   providers: [],

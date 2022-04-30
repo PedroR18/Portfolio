@@ -30,7 +30,7 @@ export class TopBarComponent implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       this.time = this.capitalizeDate(
-        moment(new Date()).format('ddd d MMM h:mm')
+        moment(new Date()).format('ddd d MMM H:mm')
       );
     }, 10000);
   }
