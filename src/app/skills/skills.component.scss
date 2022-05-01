@@ -122,6 +122,9 @@ p {
   flex-grow: 1;
   height: 100%;
   @include flex(center, center);
+  color: #4c4c4c;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 .explorer {
@@ -155,11 +158,12 @@ p {
   margin-top: 10px;
 }
 
-.white {
+.panel {
   height: 100%;
   flex-grow: 1;
   background-color: white;
   border-bottom-right-radius: 20px;
+  @include flex(center, center);
 }
 
 li {
