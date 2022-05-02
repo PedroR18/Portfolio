@@ -7,7 +7,6 @@ import { DockComponent } from './dock/dock.component';
 import { DockIconComponent } from './dock-icon/dock-icon.component';
 import { SearchComponent } from './search/search.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { InfoComponent } from './info/info.component';
 import { MainWindowComponent } from './main-window/main-window.component';
 import { ProjectShowcaseComponent } from './project-showcase/project-showcase.component';
 
@@ -18,7 +17,7 @@ import { ProjectShowcaseComponent } from './project-showcase/project-showcase.co
     DockComponent,
     DockIconComponent,
     SearchComponent,
-    InfoComponent,
+
     MainWindowComponent,
     ProjectShowcaseComponent,
   ],
