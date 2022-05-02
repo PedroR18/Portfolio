@@ -23,14 +23,14 @@ export class TopBarComponent implements OnInit {
 
   constructor() {
     this.time = this.capitalizeDate(
-      moment(new Date()).format('ddd d MMM h:mm')
+      moment(new Date()).format('ddd D MMM h:mm')
     );
   }
 
   ngOnInit(): void {
     setInterval(() => {
       this.time = this.capitalizeDate(
-        moment(new Date()).format('ddd d MMM H:mm')
+        moment(new Date()).format('ddd D MMM H:mm')
       );
     }, 10000);
   }

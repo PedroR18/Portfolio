@@ -20,20 +20,23 @@
     <div class="explorer">
       <p class="explorer-title">Projects</p>
       <ul>
-        <li>
-          <img src="assets/folder-explorer.webp" alt="Movie Finder" />
-          <p>Movie Finder</p>
-        </li>
-        <li>
-          <img src="assets/folder-explorer.webp" alt="E-Commerce Store" />
-          <p>E-commerce Store</p>
-        </li>
-        <li>
-          <img src="assets/folder-explorer.webp" alt="Message App" />
-          <p>Message App</p>
+        <li
+          *ngFor="let project of projects"
+          [ngClass]="status === project.name ? 'active' : ''"
+          (click)="setStatus(project.name)"
+        >
+          <img src="assets/folder-explorer.webp" alt="{{ project.name }}" />
+          <p>{{ project.name }}</p>
         </li>
       </ul>
     </div>
-    <div class="panel"></div>
+    <div class="panel">
+      <ng-container *ngFor="let project of projects">
+        <app-project-showcase
+          *ngIf="status === project.name"
+          [project]="project"
+        ></app-project-showcase>
+      </ng-container>
+    </div>
   </div>
 </div>
