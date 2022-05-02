@@ -9,6 +9,8 @@ import { SearchComponent } from './search/search.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MainWindowComponent } from './main-window/main-window.component';
 import { ProjectShowcaseComponent } from './project-showcase/project-showcase.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ProjectShowcaseComponent } from './project-showcase/project-showcase.co
 
     MainWindowComponent,
     ProjectShowcaseComponent,
+    AboutComponent,
+    ContactComponent,
   ],
   imports: [BrowserModule, DragDropModule],
   providers: [],

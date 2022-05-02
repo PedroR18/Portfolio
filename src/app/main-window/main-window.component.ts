@@ -33,7 +33,7 @@ export class MainWindowComponent implements OnInit {
     },
   ];
 
-  status = 'project-1';
+  status = 'Sobre';
 
   setStatus(str: string) {
     this.status = str;

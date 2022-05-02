@@ -12,13 +12,22 @@
       </div>
     </div>
     <div class="title">
-      <p>Portfolio</p>
+      <p>Finder</p>
     </div>
   </div>
 
   <div class="inner-container">
     <div class="explorer">
       <p class="explorer-title">Sobre</p>
+      <ul>
+        <li
+          (click)="setStatus('Sobre')"
+          [ngClass]="status === 'Sobre' ? 'active' : ''"
+        >
+          <img src="assets/folder-explorer.webp" alt="" />
+          <p>Sobre</p>
+        </li>
+      </ul>
       <p class="explorer-title">Portfolio</p>
       <ul>
         <li
@@ -31,6 +40,15 @@
         </li>
       </ul>
       <p class="explorer-title">Contacto</p>
+      <ul>
+        <li
+          (click)="setStatus('Contacto')"
+          [ngClass]="status === 'Contacto' ? 'active' : ''"
+        >
+          <img src="assets/folder-explorer.webp" alt="" />
+          <p>Contacto</p>
+        </li>
+      </ul>
     </div>
     <div class="panel">
       <ng-container *ngFor="let project of projects">
@@ -39,6 +57,8 @@
           [project]="project"
         ></app-project-showcase>
       </ng-container>
+      <app-about *ngIf="status === 'Sobre'"></app-about>
+      <app-contact *ngIf="status === 'Contacto'"></app-contact>
     </div>
   </div>
 </div>
