@@ -1,3 +1,26 @@
 <div class="container">
-  <h1>About</h1>
+  <div class="header">
+    <img src="assets/pic.webp" alt="Pedro Ribeiro" />
+    <div class="info">
+      <h1>Pedro Ribeiro</h1>
+      <p>Viana Do Castelo - Portugal</p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corrupti
+        ducimus maiores tenetur vitae praesentium aperiam, voluptas dolores
+        asperiores, ipsa recusandae nulla odio explicabo. Vero deleniti mollitia
+        maxime corrupti eum.
+      </p>
+    </div>
+  </div>
+  <div class="skills-container">
+    <div class="skill" *ngFor="let skill of technologies">
+      <img [src]="skill.pic" [alt]="skill.name" />
+      <div class="level-bg">
+        <div class="level">
+          <div class="inner" [style.width.%]="skill.skill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

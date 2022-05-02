@@ -7,6 +7,58 @@
 
 .container {
   @include flex(space-around, center);
+  flex-direction: column;
   height: 100%;
   width: 100%;
+}
+
+.header {
+  @include flex(space-around, center);
+
+  img {
+    height: 200px;
+    border-radius: 1000px;
+  }
+}
+
+.info {
+  @include flex(center, center);
+  flex-direction: column;
+  width: 60%;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.skill {
+  @include flex(center, center);
+  gap: 10px;
+  img {
+    height: 60px;
+  }
+}
+
+.level-bg {
+  @include flex(center, center);
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 250px;
+  height: 30px;
+}
+
+.level {
+  width: 95%;
+  height: 20px;
+}
+
+.inner {
+  height: 100%;
+  width: 0%;
+  border-radius: 20px;
+  background-color: red;
+  transition: 0.2s ease-in;
 }
