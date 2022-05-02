@@ -18,11 +18,6 @@ export class AboutComponent implements OnInit {
       skill: 90,
     },
     {
-      name: 'Sass',
-      pic: 'assets/sass.webp',
-      skill: 90,
-    },
-    {
       name: 'Javascript',
       pic: 'assets/javascript.webp',
       skill: 80,
@@ -44,15 +39,22 @@ export class AboutComponent implements OnInit {
     },
     {
       name: 'NodeJS',
-      pic: 'assets/node.webp',
+      pic: 'assets/nodejs.webp',
       skill: 50,
+    },
+    {
+      name: 'C#',
+      pic: 'assets/c.webp',
+      skill: 40,
     },
   ];
 
-  display = '';
+  display: { name: string; pic: string } | undefined = undefined;
 
-  setDisplay(str: string) {
-    this.display = str;
+  setDisplay(name?: string, pic?: string) {
+    if (name && pic) {
+      this.display = { name, pic };
+    } else this.display = undefined;
   }
 
   constructor() {}

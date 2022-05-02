@@ -3,7 +3,7 @@
     <img src="assets/pic.webp" alt="Pedro Ribeiro" />
     <div class="info">
       <h1>Pedro Ribeiro</h1>
-      <p>Viana Do Castelo - Portugal</p>
+      <p class="local">Viana Do Castelo - Portugal</p>
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corrupti
@@ -13,13 +13,16 @@
       </p>
     </div>
   </div>
-  <p class="display" *ngIf="display">{{ display }}</p>
+  <div class="display">
+    <img [src]="display.pic" [alt]="display.pic" *ngIf="display" />
+    <p>{{ display ? display.name : "" }}</p>
+  </div>
   <div class="skills-grid">
     <div
       class="skill"
       *ngFor="let skill of technologies"
-      (mouseenter)="setDisplay(skill.name)"
-      (mouseleave)="setDisplay('')"
+      (mouseenter)="setDisplay(skill.name, skill.pic)"
+      (mouseleave)="setDisplay()"
     >
       <img [src]="skill.pic" [alt]="skill.name" />
       <div class="level-bg">

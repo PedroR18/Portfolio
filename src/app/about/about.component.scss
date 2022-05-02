@@ -1,6 +1,7 @@
 @use "../../../library.scss" as *;
 
 :host {
+  @include flex(center, center);
   height: 100%;
   width: 100%;
 }
@@ -8,7 +9,7 @@
 .container {
   @include flex(space-around, center);
   flex-direction: column;
-  height: 100%;
+  height: 90%;
   width: 100%;
   position: relative;
 }
@@ -16,7 +17,6 @@
 .header {
   @include flex(space-around, center);
   width: 100%;
-  height: 50%;
 
   img {
     height: 200px;
@@ -25,9 +25,22 @@
 }
 
 .info {
-  @include flex(center, center);
+  @include flex(center, flex-start);
   flex-direction: column;
   width: 60%;
+  height: 100%;
+
+  h1 {
+    margin: 0;
+  }
+
+  .local {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin: 0;
+  }
 }
 
 .skills-grid {
@@ -83,12 +96,15 @@
 }
 
 .display {
+  @include flex(center, center);
+  gap: 10px;
   margin: 0;
   font-size: 1.5em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 30px;
+
+  img {
+    height: 30px;
+  }
 }
 
 @keyframes out {
