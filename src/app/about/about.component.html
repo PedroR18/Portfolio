@@ -13,12 +13,19 @@
       </p>
     </div>
   </div>
-  <div class="skills-container">
-    <div class="skill" *ngFor="let skill of technologies">
+  <p class="display" *ngIf="display">{{ display }}</p>
+  <div class="skills-grid">
+    <div
+      class="skill"
+      *ngFor="let skill of technologies"
+      (mouseenter)="setDisplay(skill.name)"
+      (mouseleave)="setDisplay('')"
+    >
       <img [src]="skill.pic" [alt]="skill.name" />
       <div class="level-bg">
         <div class="level">
           <div class="inner" [style.width.%]="skill.skill"></div>
+          <div class="cover"></div>
         </div>
       </div>
     </div>

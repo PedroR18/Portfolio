@@ -49,6 +49,12 @@ export class AboutComponent implements OnInit {
     },
   ];
 
+  display = '';
+
+  setDisplay(str: string) {
+    this.display = str;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}
