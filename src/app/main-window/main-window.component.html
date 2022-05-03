@@ -41,12 +41,14 @@
       </ul>
       <p class="explorer-title">Contacto</p>
       <ul>
-        <li
-          (click)="setStatus('Contacto')"
-          [ngClass]="status === 'Contacto' ? 'active' : ''"
-        >
-          <img src="assets/folder-explorer.webp" alt="" />
-          <p>Contacto</p>
+        <li (click)="saveEmail()">
+          <img src="assets/email.webp" alt="email" />
+          <p>Email</p>
+        </li>
+
+        <li (click)="openGitHub()">
+          <img src="assets/github-active.webp" alt="github" />
+          <p>GitHub</p>
         </li>
       </ul>
     </div>
@@ -58,7 +60,6 @@
         ></app-project-showcase>
       </ng-container>
       <app-about *ngIf="status === 'Sobre'"></app-about>
-      <app-contact *ngIf="status === 'Contacto'"></app-contact>
     </div>
   </div>
 </div>

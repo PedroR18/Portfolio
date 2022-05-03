@@ -15,9 +15,9 @@
 }
 
 .header {
-  @include flex(space-around, center);
+  @include flex(space-between, center);
   width: 85%;
-  height: 50%;
+  height: 45%;
 
   img {
     height: 200px;
@@ -26,13 +26,17 @@
 }
 
 .info {
-  @include flex(space-around, flex-start);
+  @include flex(center, flex-start);
   flex-direction: column;
   width: 60%;
   height: 100%;
 
   h1 {
     margin: 0;
+  }
+
+  .local {
+    margin-bottom: 30px;
   }
 
   p {

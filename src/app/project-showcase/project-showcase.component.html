@@ -7,8 +7,16 @@
     </p>
 
     <div class="links">
-      <img src="assets/github.webp" alt="GitHub" />
-      <img src="assets/link.webp" alt="Go To" />
+      <img
+        src="assets/github.webp"
+        alt="GitHub"
+        (click)="openLink(project.github)"
+      />
+      <img
+        src="assets/link.webp"
+        alt="Go To"
+        (click)="openLink(project.link)"
+      />
     </div>
   </div>
 </div>

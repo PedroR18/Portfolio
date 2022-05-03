@@ -27,6 +27,13 @@ export class TopBarComponent implements OnInit {
     this.windowStatusEmitter.emit(str);
   }
 
+  @Output() notificationEmitter = new EventEmitter<boolean>();
+
+  showNotification() {
+    this.notificationEmitter.emit(true);
+    setTimeout(() => this.notificationEmitter.emit(false), 5000);
+  }
+
   constructor() {
     this.time = this.capitalizeDate(
       moment(new Date()).format('ddd D MMM h:mm')

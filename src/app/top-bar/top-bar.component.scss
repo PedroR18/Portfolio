@@ -12,6 +12,7 @@
   box-shadow: 0 8px 32px 0 rgba(18, 18, 18, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  z-index: 100000;
 }
 
 .left {

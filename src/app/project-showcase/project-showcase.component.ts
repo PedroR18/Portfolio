@@ -14,6 +14,10 @@ export class ProjectShowcaseComponent implements OnInit {
     github: '',
   };
 
+  openLink(link: string) {
+    window.open(link, '_blank');
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

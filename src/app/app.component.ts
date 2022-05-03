@@ -12,6 +12,8 @@ export class AppComponent {
 
   windowStatus = 'Sobre';
 
+  notification = false;
+
   setWindowStatus(str: string) {
     this.windowStatus = str;
     this.status = 'window';
@@ -19,5 +21,9 @@ export class AppComponent {
 
   setStatus(str: string) {
     this.status = str;
+  }
+
+  setNotification(state: boolean) {
+    this.notification = state;
   }
 }
