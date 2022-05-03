@@ -15,8 +15,9 @@
 }
 
 .header {
-  @include flex(space-between, center);
+  @include flex(space-around, center);
   width: 85%;
+  height: 50%;
 
   img {
     height: 200px;
@@ -25,7 +26,7 @@
 }
 
 .info {
-  @include flex(center, flex-start);
+  @include flex(space-around, flex-start);
   flex-direction: column;
   width: 60%;
   height: 100%;
@@ -37,28 +38,6 @@
   p {
     margin: 0;
   }
-}
-
-.info-header {
-  @include flex(space-between, center);
-  width: 90%;
-  margin-bottom: 20px;
-
-  img {
-    height: 40px;
-    transition: 0.2s ease-in;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.05);
-      opacity: 0.8;
-    }
-  }
-}
-
-.info-header-text {
-  @include flex(center, flex-start);
-  flex-direction: column;
 }
 
 .skills-grid {
