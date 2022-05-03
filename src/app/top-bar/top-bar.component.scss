@@ -43,6 +43,8 @@
 .menu {
   @include flex(center, center);
   gap: 20px;
+  transition: 0.2s ease-in;
+
   p:nth-child(1) {
     font-weight: bold;
   }
@@ -87,5 +89,14 @@
   }
   img:nth-child(5) {
     height: 18px;
+  }
+}
+
+@media (max-width: 750px) {
+  .menu {
+    transform: translateX(-200px);
+    visibility: hidden;
+    opacity: 0;
+    display: none;
   }
 }

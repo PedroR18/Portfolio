@@ -19,12 +19,8 @@ p {
   height: 700px;
   width: 1000px;
   border-radius: 20px;
-  //background-color: white;
-  /*   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(18, 18, 18, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px); */
   position: relative;
+  transition: 0.2s ease-in;
 }
 
 .top-bar {
@@ -114,6 +110,7 @@ p {
   width: 250px;
   background: rgba(255, 255, 255, 0.6);
   border-top-left-radius: 20px;
+  transition: 0.2s ease-in;
 }
 
 .title {
@@ -136,6 +133,8 @@ p {
   border-bottom-left-radius: 20px;
   @include flex(flex-start, flex-start);
   flex-direction: column;
+  overflow: hidden;
+  transition: 0.2s ease-in;
 
   ul {
     margin-left: 4px;
@@ -198,4 +197,43 @@ li {
 
 a {
   text-decoration: none;
+}
+
+@media (max-width: 1250px) {
+  .container {
+    height: 600px;
+    width: 900px;
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    height: 600px;
+    width: 700px;
+  }
+
+  .options {
+    background-color: white;
+    width: 80px;
+  }
+
+  .explorer {
+    width: 50px;
+    min-width: 50px;
+
+    p {
+      display: none;
+    }
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+  }
 }

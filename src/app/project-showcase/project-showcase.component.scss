@@ -43,3 +43,12 @@ img {
     }
   }
 }
+
+@media (max-width: 1250px) {
+  .links {
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
