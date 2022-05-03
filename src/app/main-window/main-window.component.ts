@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-main-window',
@@ -32,11 +32,18 @@ export class MainWindowComponent implements OnInit {
       github: '',
     },
   ];
+  @Output() windowEmitter = new EventEmitter<string>();
 
-  status = 'Sobre';
+  closeWindow() {
+    this.windowEmitter.emit('');
+  }
+
+  @Output() windowStatusEmitter = new EventEmitter<string>();
+
+  @Input() status = 'Sobre';
 
   setStatus(str: string) {
-    this.status = str;
+    this.windowStatusEmitter.emit(str);
   }
   constructor() {}
 

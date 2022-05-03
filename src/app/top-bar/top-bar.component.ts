@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import * as moment from 'moment/moment';
 import 'moment/locale/pt';
 
@@ -19,6 +19,12 @@ export class TopBarComponent implements OnInit {
     });
 
     return sentence;
+  }
+
+  @Output() windowStatusEmitter = new EventEmitter<string>();
+
+  setWindowStatus(str: string) {
+    this.windowStatusEmitter.emit(str);
   }
 
   constructor() {

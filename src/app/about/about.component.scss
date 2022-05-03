@@ -15,8 +15,8 @@
 }
 
 .header {
-  @include flex(space-around, center);
-  width: 100%;
+  @include flex(space-between, center);
+  width: 85%;
 
   img {
     height: 200px;
@@ -34,13 +34,31 @@
     margin: 0;
   }
 
-  .local {
-    margin-bottom: 20px;
-  }
-
   p {
     margin: 0;
   }
+}
+
+.info-header {
+  @include flex(space-between, center);
+  width: 90%;
+  margin-bottom: 20px;
+
+  img {
+    height: 40px;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+}
+
+.info-header-text {
+  @include flex(center, flex-start);
+  flex-direction: column;
 }
 
 .skills-grid {
@@ -93,6 +111,7 @@
   right: 0;
   bottom: 0;
   animation: out 1s linear forwards;
+  z-index: 1000;
 }
 
 .display {
@@ -101,10 +120,23 @@
   margin: 0;
   font-size: 1.5em;
   height: 30px;
+  position: relative;
 
   img {
     height: 30px;
   }
+}
+
+.display-cover {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
 }
 
 @keyframes out {

@@ -1,4 +1,4 @@
-<app-top-bar></app-top-bar>
+<app-top-bar (windowStatusEmitter)="setWindowStatus($event)"></app-top-bar>
 <app-search
   *ngIf="status === 'search'"
   (windowEmitter)="setStatus($event)"
@@ -6,6 +6,10 @@
 <app-dock></app-dock>
 
 <div class="window-container" *ngIf="status === 'window'">
-  <app-main-window></app-main-window>
+  <app-main-window
+    (windowEmitter)="setStatus($event)"
+    (windowStatusEmitter)="setWindowStatus($event)"
+    [status]="windowStatus"
+  ></app-main-window>
 </div>
 <img src="assets/bg.webp" alt="background" class="bg" />

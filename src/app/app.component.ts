@@ -10,6 +10,13 @@ export class AppComponent {
 
   status = 'search';
 
+  windowStatus = 'Sobre';
+
+  setWindowStatus(str: string) {
+    this.windowStatus = str;
+    this.status = 'window';
+  }
+
   setStatus(str: string) {
     this.status = str;
   }
