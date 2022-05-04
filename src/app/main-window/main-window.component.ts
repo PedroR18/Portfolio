@@ -10,7 +10,7 @@ export class MainWindowComponent implements OnInit {
     {
       name: 'Movie Finder',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnirepellendus ullam nam nulla non voluptas fugiat eligendi dolorem quos cumut, deserunt, accusantium incidunt animi ratione facere distinctio?Facere, nemo!',
+        'Aplicação de recomendações de filmes e séries de TV escrito em React usando a API TMDB. O utilizador escolhe até 4 dos seus filmes ou programas de TV favoritos e instantaneamente é gerado um conjunto de recomendações, cada um acompanhada da respetiva sinopse, elenco principal e trailer cinematográfico.',
       pic: 'assets/movie-finder.webp',
       link: 'https://movie-discover.vercel.app/',
       github: 'https://github.com/PedroR18/Movie-Finder',
@@ -18,7 +18,7 @@ export class MainWindowComponent implements OnInit {
     {
       name: 'E-Commerce Store',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnirepellendus ullam nam nulla non voluptas fugiat eligendi dolorem quos cumut, deserunt, accusantium incidunt animi ratione facere distinctio?Facere, nemo!',
+        'Uma moderna loja de roupa online com efeitos visuais avançados e um layout visual criativo e colorido. Criado com React, este website possui também um sistema de pesquisa avançado bem como um front-end de carrinho de compras totalmente funcional.',
       pic: 'assets/fashion-store.webp',
       link: 'https://fashion-store-ashen.vercel.app/',
       github: 'https://github.com/PedroR18/E-Commerce-Fashion-Store',
@@ -26,7 +26,7 @@ export class MainWindowComponent implements OnInit {
     {
       name: 'Message App',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnirepellendus ullam nam nulla non voluptas fugiat eligendi dolorem quos cumut, deserunt, accusantium incidunt animi ratione facere distinctio?Facere, nemo!',
+        'Uma aplicação de mensagens construída com Angular com um design em painéis que proporciona uma experiência intuitiva ao utilizador e uma estética minimalista. Permite pesquisar por contatos e mensagens e suporta mensagens de texto e imagens.',
       pic: 'assets/talk-to.webp',
       link: 'https://talk-to-chi.vercel.app/',
       github: 'https://github.com/PedroR18/Message-App',

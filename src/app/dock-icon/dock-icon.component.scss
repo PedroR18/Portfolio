@@ -28,3 +28,9 @@ img {
     height: 50px;
   }
 }
+
+@media (max-width: 500px) {
+  img {
+    height: 60px;
+  }
+}

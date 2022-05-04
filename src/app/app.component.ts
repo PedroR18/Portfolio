@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -25,5 +25,12 @@ export class AppComponent {
 
   setNotification(state: boolean) {
     this.notification = state;
+  }
+
+  width = window.innerWidth;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.width = window.innerWidth;
   }
 }

@@ -52,12 +52,22 @@ export class DockComponent implements OnInit {
     'assets/Settings.webp',
   ];
 
+  iconsMinimal = [
+    'assets/Safari.webp',
+    'assets/Messages.webp',
+    'assets/Mail.webp',
+    'assets/FaceTime.webp',
+    'assets/AppStore.webp',
+  ];
+
   activeIcons =
     window.innerWidth > 1050
       ? this.iconsFull
       : window.innerWidth > 800
       ? this.iconsMd
-      : this.iconsSm;
+      : window.innerWidth > 600
+      ? this.iconsSm
+      : this.iconsMinimal;
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.activeIcons, event.previousIndex, event.currentIndex);

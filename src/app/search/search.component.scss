@@ -154,3 +154,57 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .box,
+  .results {
+    width: 400px;
+  }
+
+  .query {
+    font-size: 1.2em;
+  }
+
+  .results {
+    gap: 10px;
+
+    p {
+      font-size: 1em;
+    }
+
+    p:nth-child(2) {
+      font-size: 0.7em;
+    }
+
+    .pic {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .box {
+    width: 300px;
+  }
+
+  .query {
+    font-size: 1.1em;
+  }
+
+  .results {
+    width: 350px;
+    gap: 10px;
+
+    p {
+      font-size: 1em;
+    }
+
+    p:nth-child(2) {
+      font-size: 0.7em;
+    }
+
+    .pic {
+      margin-left: 10px;
+    }
+  }
+}
