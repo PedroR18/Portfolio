@@ -28,9 +28,11 @@ export class AppComponent {
   }
 
   width = window.innerWidth;
+  height = window.innerHeight;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.width = window.innerWidth;
+    this.height = window.innerHeight;
   }
 }

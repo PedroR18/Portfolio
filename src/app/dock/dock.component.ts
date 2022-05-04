@@ -83,7 +83,7 @@ export class DockComponent implements OnInit {
       this.activeIcons = this.iconsMd;
     } else if (window.innerWidth > 600) {
       this.activeIcons = this.iconsSm;
-    }
+    } else this.activeIcons = this.iconsMinimal;
   }
 
   ngOnInit(): void {}

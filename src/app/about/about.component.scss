@@ -17,7 +17,6 @@
 .header {
   @include flex(space-between, center);
   width: 85%;
-  height: 45%;
 
   img {
     height: 200px;
@@ -38,6 +37,9 @@
 
   p {
     margin: 0;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 150%;
   }
 }
 
@@ -46,7 +48,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   width: 95%;
-  height: 40%;
 }
 
 .skill {
@@ -129,6 +130,10 @@
     align-items: center;
     width: 80%;
     margin-top: 20px;
+
+    p {
+      width: 90%;
+    }
   }
 
   .skills-grid {
@@ -162,6 +167,7 @@
 
     p {
       text-align: center;
+      margin-top: 20px;
     }
   }
 

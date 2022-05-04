@@ -1,30 +1,35 @@
-<app-top-bar
-  (windowStatusEmitter)="setWindowStatus($event)"
-  (notificationEmitter)="setNotification($event)"
-></app-top-bar>
-<app-search
-  *ngIf="status === 'search'"
-  (windowEmitter)="setStatus($event)"
-></app-search>
-<app-dock></app-dock>
-
-<div class="window-container" *ngIf="status === 'window'">
-  <app-main-window
-    (windowEmitter)="setStatus($event)"
+<div *ngIf="height > 500" class="container">
+  <app-top-bar
     (windowStatusEmitter)="setWindowStatus($event)"
     (notificationEmitter)="setNotification($event)"
-    [status]="windowStatus"
-  ></app-main-window>
-</div>
-<div
-  [ngClass]="
-    notification ? 'email-notification' : 'email-notification-inactive'
-  "
->
-  <img src="assets/email.webp" alt="email" />
-  <div class="text">
-    <p>Email Copiado!</p>
-    <p>ribeiro-1997@hotmail.com</p>
+  ></app-top-bar>
+  <app-search
+    *ngIf="status === 'search'"
+    (windowEmitter)="setStatus($event)"
+  ></app-search>
+  <app-dock></app-dock>
+
+  <div class="window-container" *ngIf="status === 'window'">
+    <app-main-window
+      (windowEmitter)="setStatus($event)"
+      (windowStatusEmitter)="setWindowStatus($event)"
+      (notificationEmitter)="setNotification($event)"
+      [status]="windowStatus"
+    ></app-main-window>
   </div>
+  <div
+    [ngClass]="
+      notification ? 'email-notification' : 'email-notification-inactive'
+    "
+  >
+    <img src="assets/email.webp" alt="email" />
+    <div class="text">
+      <p>Email Copiado!</p>
+      <p>ribeiro-1997@hotmail.com</p>
+    </div>
+  </div>
+  <img src="assets/bg.webp" alt="background" class="bg" />
 </div>
-<img src="assets/bg.webp" alt="background" class="bg" />
+<div class="invalid">
+  <p>Resolução de ecrã inválida</p>
+</div>
